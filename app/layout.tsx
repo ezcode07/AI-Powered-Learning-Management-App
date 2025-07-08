@@ -17,7 +17,7 @@ const bricolageGrotesque = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: "Learning Management App",
+  title: "PathWise",
   description: "Your learning companion",
 };
 
