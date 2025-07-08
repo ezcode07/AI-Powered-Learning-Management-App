@@ -1,16 +1,24 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
+import {
+  ClerkProvider,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 import Navbar from "@/components/navbar";
 
-const bricolage = Bricolage_Grotesque({
-  variable: "--font-bricolage",
+const bricolageGrotesque = Bricolage_Grotesque({
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Converso",
-  description: "Real-time AI Teaching Platform",
+  title: "Learning Management App",
+  description: "Your learning companion",
 };
 
 export default function RootLayout({
@@ -20,10 +28,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${bricolage.variable} antialiased`}>
-        <Navbar />
-        {children}
+        <body
+          className={`${bricolageGrotesque.className} antialiased`}
+        >
+        <ClerkProvider appearance={{variables: { colorPrimary: "#fe5933" }}}>
+          <header>
+            <Navbar />
+          </header>
+          {children}
+    </ClerkProvider>
         </body>
-    </html>
+      </html>
   );
 }
