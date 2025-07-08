@@ -1,10 +1,11 @@
 import React from 'react'
+import {PricingTable} from '@clerk/nextjs'
 
 const page = () => {
   return (
     <div>
-      
-        <p>Manage your subscription here.</p>
+      <h1 className='text-3xl font-bold text-center'>Subscription Plans</h1>
+       <PricingTable />
     </div>
   )
 }
