@@ -36,7 +36,7 @@ const CompanionCards = ({id,name,topic,subject,duration,color} : CompanionCardsP
         <p className="text-sm">{duration} minutes</p>
       </div>
       <Link 
-      href={`/companions/${id}`} 
+      href={`/companion/${id}`} 
       className="w-full"
       >
         <button className="btn-primary w-full justify-center">Launch Soon</button>

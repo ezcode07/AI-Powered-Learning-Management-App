@@ -13,7 +13,7 @@ const Cta = () => {
       <Image src="/images/cta.svg" alt="cta image" width={500} height={300} className='w-full h-auto' />
       <button className='btn-primary'>
         <Image src="/icons/plus.svg" alt="plus" width={12} height={12}/>
-        <Link href={`/companions/new`}>
+        <Link href={`/companion/new`}>
         <p>Build your New Companion</p>
         </Link>
       </button>
